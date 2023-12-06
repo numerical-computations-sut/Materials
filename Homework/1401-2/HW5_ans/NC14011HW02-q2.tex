@@ -1,0 +1,35 @@
+\\
+مقدار تقریبی
+$y(0.3)$
+و 
+$y'(0.3)$ 
+را در معادله دیفرانسیل زیر با گام 
+$0.1$
+با استفاده از روش رانگ - کوتای مرتبه چهارم محاسبه کنید:
+\begin{align*}
+\begin{cases}
+y'' - 2y' + 2y = \sinh(2x) \sin(x) \\
+y(0) = -0.4 \\
+y'(0) = -0.6
+\end{cases}
+\end{align*}
+\textcolor{blue}{حل
+\\
+از روش تبدیل دستگاه به ۲ معادله:
+\begin{align*}
+    p &= y^{'} \Rightarrow p(0) = -0.6 \\
+    p^{'} &= y^{''} \Rightarrow p^{'} = 2y^{'} - 2y + \sin(x) \sinh(2x) = 2p - 2y + \sin(x) \sinh(2x)
+\end{align*}
+رانگ‌کوتای مرتبه ۴ : (دوبار در هر دور به ازای دو معادله)
+\begin{align*}
+    k_1 &= h f(x_n, y_n) \\
+    k_2 &= hf(x_n + \frac{h}{2}, y_n + \frac{k_1}{2}) \\
+    k_3 &= h f(x_n + \frac{h}{2}, y_n + \frac{k_2}{2}) \\
+    k_4 &= hf(x_n + h, y_n + k_3) \\
+    y_{n + 1} &= y_{n} + \frac{k_1 + 2k_2 + 2k_3 + k_4}{6}
+\end{align*}
+با حل دستگاه‌های بالا به جواب مقابل می‌رسیم:
+\begin{align*}
+    y(0.3) \approx -0.5941 \hspace{0.3 cm} y^{'}(0.3) \approx -0.6726
+\end{align*}
+}

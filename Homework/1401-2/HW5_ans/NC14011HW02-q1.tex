@@ -1,0 +1,63 @@
+معادله دیفرانسیل
+$y' = \lambda y$
+را در نظر بگیرید.
+\begin{enumerate}
+    \item 
+    نشان دهید روش اویلر برای این معادله به ازای
+    $\lambda < 0$ و مقدار ابتدایی 
+    $y(0) = 1$
+    برای طول گام
+    
+    $-z < \lambda h < 0$
+    پایدار است; یعنی
+    $\lim_{{n \to \infty}} y_n = 0$.
+    \item 
+    نشان دهید در حل معادله بالا می‌توان روش رانگ - کوتای مرتبه چهارم را به صورت زیر نوشت:
+    \[y_{i+1} = (1 + h\lambda + \frac{1}{2}(h\lambda)^2 + \frac{1}{6}(h\lambda)^3 + \frac{1}{24}(h\lambda)^4)y_i\]
+\end{enumerate}
+\textcolor{blue}{حل
+\begin{enumerate}
+    \item 
+    \begin{align*}
+        y_1 &= y_0 + h\underbrace{(\lambda y_0)}_{f(x_0,y_0)} = y_0 (\lambda h + 1) \\
+        y_2 &= y_1 + h \underbrace{(\lambda y_1)}_{f(x_1,y_1)} = y_1 (\lambda h + 1) = y_0 (\lambda h + 1)^2 \\
+        &\vdots \\
+        y_n &= y_{n - 1} + h\underbrace{(\lambda y_{n - 1})}_{f(x_{n - 1}, y_{n - 1})} = y_{n - 1}(\lambda h + 1) = y_0 (\lambda h + 1)^n
+    \end{align*}
+    \begin{align*}
+        -2 < \lambda h < 0 \Rightarrow -1 < \lambda h + 1 < 1
+    \end{align*}
+    و عددی بین 
+    -۱ و 
+    ۱ اگر به توان
+    $n \rightarrow \infty$
+    برسد، عملا صفر می‌شود. پس
+    \begin{align*}
+        \lim_{n \to \infty} y_n = \lim_{n \to \infty} y_0 (\lambda h  + 1)^n= 0
+    \end{align*}
+    \item 
+    می‌دانیم در رانگ‌کوتای مرتبه ۴:
+    \begin{align*}
+        k_1 &= hf(x_n,y_n) = h \lambda y_n \\
+        k_2 &= hf(x_n + \frac{h}{2}, y_n + \frac{k_1}{2}) = h \lambda (y_n + \frac{h \lambda y_n}{2}) = h \lambda y_n (\frac{h \lambda}{2} + 1) \\
+        k_3 &= hf(x_n + \frac{h}{2}, y_{n} + \frac{k_2}{2}) = h\lambda (y_n + \frac{k_2}{2}) = h \lambda (y_n + \frac{h \lambda y_n}{2} (\frac{h \lambda }{2} + 1)) = h \lambda y_n (1 + \frac{h^2 \lambda^2}{4} + \frac{h \lambda}{2}) \\
+        k_4 &= hf(x_n + h, y_n + k_3) \\
+        k_4 &= h \lambda (y_n + k_3) = h \lambda (y_n + h \lambda y_n (1 + \frac{h^2 \lambda^2}{4} + \frac{h \lambda}{2})) = h \lambda y_n (1 + h \lambda + \frac{h^3 \lambda^3}{4} + \frac{h^2 \lambda^2}{2}) \\
+        y_{n + 1} &= y_{n} + \frac{k_1 + 2k_2 + 2k_3 + k_4}{6} \\
+        \Rightarrow y_{n + 1} &= y_{n} + h \lambda y_{n} \frac{1 + 2(\frac{h \lambda}{2} + 1) + 2(1 + \frac{h^2 \lambda^2}{4} + \frac{h \lambda}{2}) + 1 + h \lambda + \frac{h^3 \lambda^3}{4} + \frac{h^2 \lambda^2}{2}}{6}
+    \end{align*}
+    حال با جایگذاری $i$
+    به جای 
+    $n$
+    و سپس فاکتورگیری از 
+    $y_i$
+    خواهیم داشت:
+    \begin{align*}
+        y_{i + 1} &= y_i (1 + h\lambda \frac{1 + h\lambda + 2 + 2 + \frac{h^2 \lambda^2}{2} + h\lambda + 1 + h\lambda + \frac{h^3 \lambda^3}{4} + \frac{h^2 \lambda^2}{2}}{6}) \\
+        &= y_i (1 + (h \lambda) \frac{6}{6} + (h \lambda) (\frac{3 h \lambda}{6}) + (h\lambda)(\frac{h^2 \lambda^2}{6}) + (h\lambda) (\frac{h^3 \lambda^3}{4 \times 6})) \\
+        &= y_i (1 + h\lambda + \frac{(h \lambda)^2}{2} + \frac{(h \lambda)^3}{6} +\frac{(h\lambda)^4}{24})
+    \end{align*}
+    که همان صورت سوال است.
+\end{enumerate}
+}
+

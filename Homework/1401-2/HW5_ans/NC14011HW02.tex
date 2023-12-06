@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,margin=2cm,top=2cm,bottom=2cm,xetex]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{flexisym}
+\usepackage{algorithm}
+\usepackage{pdfpages}
+\usepackage{algorithmic}
+\usepackage{tabularx}
+\usepackage{xepersian}
+\usepackage{amsmath}
+\usepackage{physics}
+%\usepackage{mathtools}
+
+\DeclareFontFamily{U}{matha}{\hyphenchar\font45}
+\DeclareFontShape{U}{matha}{m}{n}{ <-6> matha5 <6-7> matha6 <7-8>
+matha7 <8-9> matha8 <9-10> matha9 <10-12> matha10 <12-> matha12 }{}
+%\DeclareSymbolFont{matha}{U}{matha}{m}{n}
+%
+%\DeclareMathSymbol{\nvartrianglelefteq}{\mathrel}{matha}{"9E}
+%\DeclareMathSymbol{\vartrianglelefteq}{\mathrel}{matha}{"9C}
+
+\newcount\HWcnt
+\def\ttmp#1#2#3#4#5#6#7#8#9|{\def\Wjob{#9}}%
+\expandafter\ttmp\jobname |
+\def\ttmp#1#2#3{\global\HWcnt=#2#3}
+\expandafter\ttmp\Wjob
+
+\settextfont[Scale = 1.0 ,
+             BoldFont = *Bd ,
+             ItalicFont = *It ,
+             BoldItalicFont = *BdIt ,
+             Extension = .ttf
+            ]{XB Niloofar}
+\ExplSyntaxOn
+\cs_set_eq:NN
+\etex_iffontchar:D
+\tex_iffontchar:D
+\cs_undefine:N \c_one
+\int_const:Nn \c_one { 1 }
+\ExplSyntaxOff
+\setdigitfont[Scale = 1.0 ,
+             BoldFont = *Bd ,
+             ItalicFont = *It ,
+             BoldItalicFont = *BdIt ,
+             Extension = .ttf
+            ]{XB Niloofar}
+\renewcommand{\baselinestretch}{1.2}
+\pagestyle{empty}
+
+\makeatletter
+\def\abj@num@i#1{%
+    \ifcase #1\or الف\or ب\or ج\or د\or ه\or و\or ز\or ح\or ط\fi \ifnum #1=\z@ \abjad@zero \fi
+}
+\renewcommand{\theenumi}{\abjad{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\long\def\makeHead#1{%
+	\begin{center}\large
+		\begin{tabular}{@{}p{.33\linewidth}<{\hfill}@{}>{\hfil}p{.33\textwidth}<{}@{}>{\hfill}p{.33\textwidth}@{}}
+            \textbf{محاسبات عددی} & & \textbf{سری شمارهٔ 5} \\[.5ex]
+            \textbf{نیم‌سال دوم ۱۴۰۱-۱۴۰۲} & &  \textbf{موعد تحویل: #1}\\[.5ex] \hline\hline
+		\end{tabular}
+	\end{center}\smallskip
+%	\def\theenumii{\arabic{enumii}}\def\theenumi{\alph{enumii}}\def\labelenumi{\theenumi)}\def\labelenumii{\theenumii)}%
+}
+
+\newcommand{\Rule}{\ \hfill\rule{\linewidth}{0.5pt}\hfill\ \par\vspace*{-2ex}\par}
+\newcommand{\DescRule}{\ \hfill\rule{\linewidth}{1pt}\hfill\ \vspace*{-2ex}\par}
+\def\rank{\mathop{\mathrm{rank}}\nolimits}
+
+\begin{document}
+\makeHead{پاسخنامه تمرین}
+\begin{description}
+% 	\item{\textbf{سوال 1.}} \input{\jobname-q1.tex}
+	
+% 	\Rule
+	\item{\textbf{سوال ۱.}} \input{NC14011HW02-q1}
+	
+	\Rule 
+	
+	\item {\textbf{سوال ۲.}}
+	\input{NC14011HW02-q2}
+	
+	\Rule
+	
+	\item {\textbf{سوال ۳.}}
+	\input{NC14011HW02-q3}
+	
+	\Rule
+
+	\vspace*{-2ex}\ \hfill\textbf{موفق باشید.}
+\end{description}
+\end{document}
