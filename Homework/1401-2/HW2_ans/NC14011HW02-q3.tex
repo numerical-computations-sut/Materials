@@ -1,0 +1,142 @@
+\\
+معادله‌ی خطی
+$Ax = b$
+را با مقادیر زیر درنظر بگیرید:
+\begin{LTR}
+\begin{center}
+A = $\begin{pmatrix}
+4 & 1 & -2\\
+-1 & 4 & -1\\
+1 & -1 & 4
+\end{pmatrix}$ و
+b =  $\begin{pmatrix}
+4\\
+0\\
+4
+\end{pmatrix}$
+\end{center}
+\end{LTR}
+
+\begin{enumerate}
+\item
+با تقریب اولیه‌ی
+$x^{(0)} = 0$
+و سه تکرار از روش ژاکوبی
+\footnote{Jacobi}
+مقادیر
+$x^{(1)}$
+،
+$x^{(2)}$
+و
+$x^{(3)}$
+را محاسبه کنید.
+
+\item
+با تقریب اولیه‌ی
+$x^{(0)} = 0$
+و سه تکرار از روش گاوس-سایدل
+\footnote{\lr{Gauss-Seidel}}
+مقادیر
+$x^{(1)}$
+،
+$x^{(2)}$
+و
+$x^{(3)}$
+را محاسبه کنید.
+\item
+کدام یک از روش‌های بالا تقریب بهتری از جواب‌ها می‌دهد؟
+
+\end{enumerate}
+
+\textcolor{blue}{حل
+\\
+\begin{enumerate}
+    \item دور اول:
+    \begin{align*}
+        \begin{cases}
+        4x_1 + 0 - 2 (0) = 4 \\
+         -(0) + 4x_2 - (0) = 0 \\
+        0 - (0) + 4x_3 = 4
+        \end{cases}
+        \Rightarrow 
+        \begin{cases}
+            x_1 = 1 \\
+            x_2 = 0 \\
+            x_3 = 1
+        \end{cases}
+    \end{align*}
+    دور دوم:
+    \begin{align*}
+        \begin{cases}
+            4x_1 + 0 - 2(1) = 4 \\
+            -1 + 4x_2 - 1 = 0 \\
+            1 - 0 + 4x_3 = 4
+        \end{cases} \Rightarrow 
+        \begin{cases}
+            x_1 = 1.5 \\
+            x_2 = 0.5 \\
+            x_3 = 0.75
+        \end{cases}
+    \end{align*}
+    دور سوم:
+    \begin{align*}
+        \begin{cases}
+            4x_1 + 0.5 - 2(0.75) = 4 \\
+            -1.5 + 4x_2 - 0.75 = 0 \\
+            1.5 - 0.5 + 4x_3 = 4
+        \end{cases}
+        \Rightarrow \begin{cases}
+            x_1 = 1.25 \\
+            x_2 = 0.5625 \\
+            x_3 = 0.75
+        \end{cases}
+    \end{align*}
+    \item دور اول:
+    \begin{align*}
+        &4x_1 + 1 (0) - 2 (0) = 4 \rightarrow x_1 = 1 \\
+        &-1 (x_1) + 4x_2 - 1(0) = 0 \rightarrow 4x_2 = x_1 \xrightarrow{x_1 = 1} x_2 = 0.25 \\
+        &x_1 - 1(x_2) + 4x_3 = 4 \xrightarrow{(x_1, x_2) = (1,0.25)} 1 - 0.25 + 4x_3 = 4 \rightarrow x_3 = 0.8125
+    \end{align*}
+    دور دوم:
+    \begin{align*}
+        &4x_1 + 0.25 - 2(0.8125) = 4 \rightarrow x_1 = 1.34375 \\
+        &-x_1 + 4x_2 - 0.8125 = 0 \xrightarrow{\text{از بالایی}} x_2 = 0.5390625 \\
+        &x_1 - x_2 + 4x_3 = 4 \xrightarrow{\text{از بالایی ها}} x_3 = 0.798828125
+    \end{align*}
+    \newpage
+    دور سوم:
+    \begin{align*}
+        &4x_1 + 0.5390625 - 2(0.798828125) = 4 \rightarrow x_1 = 1.2646484375 \\
+        &-x_1 + 4x_2 - 0.798828125 = 0 \xrightarrow{\text{از بالایی}} x_2 = 0.5158691406 \\
+        &x_1 - x_2 + 4x_3 = 4 \xrightarrow{\text{از بالایی ها}} x_3 = 0.8128051758
+    \end{align*}
+    \item 
+    جواب‌ واقعی (بدست امده از ولفرام)
+    \begin{align*}
+        \begin{cases}
+            x_1 = 1.2753623188 \\ 
+            x_2 = 0.5217391304 \\
+            x_3 = 0.8115942029
+        \end{cases}
+    \end{align*}
+    حال اختلاف‌ جواب‌های روش‌های بخش الف و ب را مقایسه می‌کنیم
+    \\
+    اختلاف روش گاوس سایدل:
+    \begin{align*}
+        \begin{cases}
+            \Delta x_1^{A} = 0.0107138743 \\
+            \Delta x_2^{A} = 0.0058699898 \\
+            \Delta x_3^{A} = 0.0012109729
+        \end{cases}
+    \end{align*}
+    اختلاف روش ژاکوبی:
+    \begin{align*}
+        \begin{cases}
+            \Delta x_1^{B} = 0.0253623188 > \Delta x_1^{A} \\
+            \Delta x_2^{B} = 0.0407608696 > \Delta x_2^{A} \\
+            \Delta x_3^{B} = 0.0615942029 > \Delta x_3^{A}
+        \end{cases}
+    \end{align*}
+    به وضوح جواب‌های بدست آمده از (ب) نزدیکتر هستند، پس گاوس سایدل تقریب بهتری از جواب‌ها می‌دهد.
+\end{enumerate}
+}

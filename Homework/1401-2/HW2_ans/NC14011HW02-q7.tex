@@ -1,0 +1,105 @@
+\def\-{\raisebox{.75pt}{-}}
+
+جواب دستگاه زیر را تا دو رقم اعشار محاسبه کنید
+\begin{center}
+$
+    \begin{cases}
+    x = \frac{1}{2} cos(y) \\
+    y = \frac{1}{2} sin(y)
+    \end{cases}
+$
+\end{center}
+
+\textcolor{blue}{
+حل 
+\\
+روش نیوتون:
+\begin{align*}
+    &f \rightarrow x - \frac{1}{2} \cos{y} = 0 \rightarrow \begin{cases}
+        \frac{\partial f}{\partial x} = 1 \\
+        \frac{\partial f}{\partial y} = \frac{1}{2} \sin{y}
+    \end{cases}
+    \\
+    &g \rightarrow y - \frac{1}{2} \sin{x} = 0 \rightarrow 
+    \begin{cases}
+        \frac{\partial g}{\partial x} = -\frac{1}{2} \cos{x} \\
+        \frac{\partial g}{\partial y} = 1
+    \end{cases}
+\end{align*}
+با داشتن اطلاعات بالا ماتریس ژاکوبین را به صورت مقابل تشکیل می‌دهیم
+\begin{align*}
+    J = \begin{pmatrix}
+        1 & \frac{1}{2} \sin{y} \\
+        -0.5 \cos{x} & 1
+    \end{pmatrix}
+\end{align*}
+با فرض اعداد اولیه 
+$
+\begin{cases}
+    x = 0.5 \\
+    y = 0.5 \\
+\end{cases}$
+داریم:
+\begin{align*}
+    &\begin{array}{ccccccc}
+\overrightarrow{x} & & J & & f(\overrightarrow{x}) & \\
+\begin{bmatrix}
+    0.5 \\
+    0.5
+\end{bmatrix} & - & 
+\begin{bmatrix}
+    1 & 0.24 = \frac{1}{2} \sin{0.5} \\
+    \-0.44 = \-\frac{1}{2} \cos{0.5} & 1
+\end{bmatrix}^{-1} & \times &
+\begin{bmatrix}
+    0.06 = \frac{1}{2} \- \frac{1}{2} \cos{0.5} \\
+    0.26 = \frac{1}{2} \- \frac{1}{2} \sin{0.5}
+\end{bmatrix} &= &
+\begin{bmatrix}
+    0.5 \\
+    0.24 
+\end{bmatrix}
+\end{array} \\
+&\begin{array}{ccccccc}
+ & & & & & \\
+\begin{bmatrix}
+    0.5 \\
+    0.24
+\end{bmatrix} & - & 
+\begin{bmatrix}
+    1 & 0.12 = \frac{1}{2} \sin{0.24} \\
+    \-0.44 = \-\frac{1}{2} \cos{0.5} & 1
+\end{bmatrix}^{-1} & \times &
+\begin{bmatrix}
+    0.01 = \frac{1}{2} \- \frac{1}{2} \cos{0.24} \\
+    0.00 = 0.24 \- \frac{1}{2} \sin{0.5}
+\end{bmatrix} &= &
+\begin{bmatrix}
+    0.49 \\
+    0.24 
+\end{bmatrix}
+\end{array}
+\\
+&\begin{array}{ccccccc}
+ & & & & & \\
+\begin{bmatrix}
+    0.49 \\
+    0.24
+\end{bmatrix} & - & 
+\begin{bmatrix}
+    1 & 0.12 = \frac{1}{2} \sin{0.24} \\
+    \-0.44 = \-\frac{1}{2} \cos{0.49} & 1
+\end{bmatrix}^{-1} & \times &
+\begin{bmatrix}
+    0.01 = 0.49 \- \frac{1}{2} \cos{0.24} \\
+    0.00 = 0.24 \- \frac{1}{2} \sin{0.49}
+\end{bmatrix} &= &
+\begin{bmatrix}
+    0.49 \\
+    0.24 
+\end{bmatrix}
+\end{array}
+\end{align*}
+با جای‌گذاری در رابطه اصلی نتیجه می‌شود که پاسخ درست است 
+(نزدیک به برقراری کامل معادلات است)
+}

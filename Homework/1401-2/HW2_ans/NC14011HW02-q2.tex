@@ -1,0 +1,75 @@
+\\
+جواب دستگاه خطی زیر را با استفاده از روش حذفی گاوس
+\footnote{\lr{Gaussian Elimination}}
+ به دست آورید.
+\\
+\begin{center}
+    \begin{cases}
+      x_1 - 4x_2 -12x_3 = 9\\
+      x_1 - 2x_2 - 6x_3 = 5\\
+      2x_1 + 4x_2 + 12x_3 = -6
+    \end{cases}
+\end{center}
+
+\textcolor{blue}{حل
+\\
+\begin{align*}
+    \left(\begin{array}{ccc|c}  
+ 1 & -4 & -12 & 9 \\  
+ 1 & -2 & -6 & 5  \\ 
+ 2 & 4 & 12 & -6
+\end{array}\right)
+\end{align*}
+افزودن منفی سطر اول به سطر دوم:
+\begin{align*}
+    \rightarrow \left(\begin{array}{ccc|c}  
+ 1 & -4 & -12 & 9 \\  
+ 0 & 2 & 6 & -4  \\ 
+ 2 & 4 & 12 & -6
+\end{array}\right)
+\end{align*}
+افزودن منفی دوبرابر سطر اول به سطر سوم:
+\begin{align*}
+    \rightarrow \left(\begin{array}{ccc|c}  
+ 1 & -4 & -12 & 9 \\  
+ 0 & 2 & 6 & -4  \\ 
+ 0 & 12 & 36 & -24
+\end{array}\right)
+\end{align*}
+افزودن منفی شش برابر سطر دوم به سطر سوم:
+\begin{align*}
+    \rightarrow \left(\begin{array}{ccc|c}  
+ 1 & -4 & -12 & 9 \\  
+ 0 & 2 & 6 & -4  \\ 
+ 0 & 0 & 0 & 0
+\end{array}\right)
+\end{align*}
+تقسیم سطر دوم بر ۲:
+\begin{align*}
+    \rightarrow \left(\begin{array}{ccc|c}  
+ 1 & -4 & -12 & 9 \\  
+ 0 & 1 & 3 & -2  \\ 
+ 0 & 0 & 0 & 0
+\end{array}\right)
+\end{align*}
+افزودن ۴ برابر سطر دوم به سطر اول:
+\begin{align*}
+    \rightarrow \left(\begin{array}{ccc|c}  
+ 1 & 0 & 0 & 1 \\  
+ 0 & 1 & 3 & -2  \\ 
+ 0 & 0 & 0 & 0
+\end{array}\right) \Rightarrow \begin{cases}
+    x_1 = 1 \\ 
+    x_2 + 3x_3 = -2 \rightarrow (I)
+\end{cases}
+\end{align*}
+هر 
+$x_2$
+و
+$x_3$
+ای که در معادله‌ی
+$I$
+صدق کنند به همراه 
+$x_1 = 1$
+جواب دستگاه هستند.
+}

@@ -1,0 +1,41 @@
+\\
+جواب دستگاه خطی زیر را با استفاده از روش کرامر
+\footnote{Cramer}
+ به دست آورید.
+\\
+\begin{center}
+    \begin{cases}
+      2x_1 - 6x_2 + x_3 = 2\\
+      x_1 - x_2 - x_3 = 0\\
+      x_2 + x_3 = 1
+    \end{cases}
+\end{center}
+
+\textcolor{blue}{حل
+\\
+\begin{align*}
+    D &= \begin{vmatrix}
+     2 & -6 & 1\\ 
+     1 & -1 & -1\\
+     0 & 1 & 1 
+\end{vmatrix}  = 7
+ \\ 
+ D_1 &= \begin{vmatrix}
+     2 & -6 & 1\\ 
+     0 & -1 & -1\\
+     1 & 1 & 1 
+\end{vmatrix} = 7 \rightarrow x_1 = \frac{D_1}{D} = \frac{7}{7} = 1 \\
+D_2 &= \begin{vmatrix}
+     2 & 2 & 1\\ 
+     1 & 0 & -1\\
+     0 & 1 & 1 
+\end{vmatrix} = 1 \rightarrow x_2 = \frac{D_2}{D} = \frac{1}{7}
+\\
+D_3 &= \begin{vmatrix}
+     2 & -6 & 2\\ 
+     1 & -1 & 0\\
+     0 & 1 & 1 
+\end{vmatrix} = 6 \rightarrow x_3 = \frac{D_3}{D} = \frac{6}{7}
+\end{align*}
+}
+

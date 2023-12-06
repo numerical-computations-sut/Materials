@@ -1,0 +1,118 @@
+تقریبی از جواب دستگاه
+\begin{center}
+$
+    \begin{cases}
+    x^2 + y^2 = 25 \\
+    x^2 - y^2 = 5
+    \end{cases}
+$
+\end{center}
+بدست آورید که 
+$|y_{n+1} - y_n| < 10^{-3}$
+و
+$|x_{n+1} - x_n| < 10^{-3}$.
+
+\textcolor{blue}{
+حل 
+\\
+روش نیوتون:
+\begin{align*}
+    &f \rightarrow x^2  + y^2 - 25= 0 \rightarrow \begin{cases}
+        \frac{\partial f}{\partial x} = 2x \\
+        \frac{\partial f}{\partial y} = 2y
+    \end{cases}
+    \\
+    &g \rightarrow x^2 - y^2 - 5 = 0 \rightarrow 
+    \begin{cases}
+        \frac{\partial g}{\partial x} = 2x \\
+        \frac{\partial g}{\partial y} = -2y
+    \end{cases}
+\end{align*}
+با داشتن اطلاعات بالا ماتریس ژاکوبین را به صورت مقابل تشکیل می‌دهیم
+\begin{align*}
+    J = \begin{pmatrix}
+        2x & 2y \\
+        2x & -2y
+    \end{pmatrix}
+\end{align*}
+با فرض اعداد اولیه 
+$\begin{cases}
+    x = 4 \\
+    y = 3
+\end{cases}$
+داریم:
+(دلیل حدس :
+$4^2 + 3^2 = 25$
+و
+$4^2 - 3^2 = 7$
+(نزدیک به ۵)
+پس زیاد نباید از جواب دور باشد)
+\begin{align*}
+    &\begin{array}{ccccccc}
+\overrightarrow{x} & & J & & f(\overrightarrow{x}) & \\
+\begin{bmatrix}
+    4 \\
+    3
+\end{bmatrix} & - & 
+\begin{bmatrix}
+    8 &  6  \\
+    8 & -6
+\end{bmatrix}^{-1} & \times &
+\begin{bmatrix}
+    0 = 16 + 9 - 25 \\
+    2 = 16 - 9 - 5
+\end{bmatrix} &= &
+\begin{bmatrix}
+    3.875 \\
+    3.167
+\end{bmatrix}
+\end{array} \\
+&\begin{array}{ccccccc}
+ & & & & & \\
+\begin{bmatrix}
+    3.875 \\
+    3.167
+\end{bmatrix} & - & 
+\begin{bmatrix}
+    ‌7.750 & 6.334 \\
+    7.750 & -6.334
+\end{bmatrix}^{-1} & \times &
+\begin{bmatrix}
+    0.046\\
+    -0.014
+\end{bmatrix} &= &
+\begin{bmatrix}
+    3.873 \\
+    3.162 
+\end{bmatrix}
+\end{array}
+\\
+&\begin{array}{ccccccc}
+ & & & & & \\
+\begin{bmatrix}
+    3.873 \\
+    3.162
+\end{bmatrix} & - & 
+\begin{bmatrix}
+    7.746 & 6.324 \\
+    7.746 & -6.324
+\end{bmatrix}^{-1} & \times &
+\begin{bmatrix}
+    -0.002 \\
+    0.002
+\end{bmatrix} &= &
+\begin{bmatrix}
+    3.873 \\
+    3.162
+\end{bmatrix}
+\end{array}
+\end{align*}
+اختلاف با قبلی‌ها کمتر از
+$10^{-3}$
+است
+(در تمام محاسبات تا ۳ رقم گرده
+کرده‌ایم)
+با جای‌گذاری در رابطه اصلی نتیجه می‌شود که پاسخ درست است 
+(نزدیک به برقراری کامل معادلات است)
+}
+
