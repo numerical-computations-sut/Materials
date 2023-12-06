@@ -1,0 +1,73 @@
+\\
+جدول مقادیر زیر را در نظر بگیرید:
+
+\begin{latin}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{c|c c c}
+      \textbf{$x$} & $0$ & $2$ & $4$ \\
+      \hline
+      \textbf{$f(x)$} & 9.90 & 7.94 & 23.00 \\
+    \end{tabular}
+  \end{center}
+\end{table}
+\end{latin}
+
+\begin{enumerate}
+	\item
+    ابتدا به‌روش
+    کمترین مربعات
+    تخمینی از
+    $f(x)$
+    به‌فرم
+    $ax^2 + bx + c$
+    بزنید.
+    سپس به‌کمک رابطه به‌دست‌آمده،
+    مقدار
+    $\int\limits^5_{-1}f(x)dx$
+    را تخمین بزنید.
+    
+    \item
+    به‌کمک روش ذوزنقه‌ای،
+    مقدار
+    $\int\limits^5_{-1}f(x)dx$
+    را تخمین بزنید.
+\end{enumerate}
+\textcolor{blue}{حل
+\\
+\begin{enumerate}
+    \item
+    \begin{align*}
+    \begin{bmatrix}
+        3 & 0 + 2 + 4 & 0 + 4 + 16 \\
+        0 + 2 + 4 & 0 + 4 + 16 & 0 + 8 + 64 \\
+        0 + 4 + 16 & 0 + 8 + 64 & 0 + 16 + 256
+    \end{bmatrix}
+    \begin{bmatrix}
+        c \\ b \\ a
+    \end{bmatrix} = \begin{bmatrix}
+        9.9 + 7.94 + 23 \\
+        9.9 (0) + 7.94 (2) + 23 (4)) \\
+        9.9 (0) + 7.94 (4) + 23 (4^2)
+    \end{bmatrix}
+    \end{align*}
+    با دادن دستگاه بالا به ولفرام خواهیم داشت:
+    \begin{align*}
+        \begin{cases}
+            a \approx 2.1275 \\
+            b \approx -5.235 \\
+            c \approx 9.9
+        \end{cases}
+    \end{align*}
+    پس تخمین نهایی به صورت
+    $2.1275 x^2 - 5.235x + 9.9$
+    خواهد بود. حال با انتگرال گیری خواهیم داشت:
+    \begin{align*}
+        I = (x^3 \frac{2.1275}{3} - 5.235 \frac{x^2}{2} + 9.9 x) \Biggr|^{5}_{-1} = 85.935 
+    \end{align*}
+    \item 
+    \begin{align*}
+        \text{جواب} \approx h \times (9.9 + 7.94 + 23) \stackrel{h = 1}{=} 81.68
+    \end{align*}
+\end{enumerate}
+}

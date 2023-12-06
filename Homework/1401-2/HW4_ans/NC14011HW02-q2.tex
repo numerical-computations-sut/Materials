@@ -1,0 +1,46 @@
+\\
+جدول مقادیر زیر را در نظر بگیرید:
+
+\begin{latin}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{c|c c c}
+      \textbf{$x$} & $0$ & $1$ & $2$ \\
+      \hline
+      \textbf{$f(x)$} & 9.90 & 7.94 & 23.00 \\
+    \end{tabular}
+  \end{center}
+\end{table}
+\end{latin}
+
+\begin{enumerate}
+	\item
+	به‌کمک سری تیلور تقریبی از
+    $f''(1)$
+    ارائه دهید.
+	
+	\item
+	حد بالای خطای این تقریب را به‌کمک خطای سری تیلور به دست آورید.
+\end{enumerate}
+\textcolor{blue}{حل
+\\
+\begin{enumerate}
+    \item
+    عملا فرمولی که با سری تیلور به آن می‌رسیم همان فرمول نقطه میانی‌ای است که به شکل زیر است:
+    \begin{align*}
+        f^{''}(x_i) &= \frac{f(x_{i + 1}) - 2f(x_i) + f(x_{i - 1})}{h^2} \\
+        &= \frac{23 - 2 (7.94) + 9.9}{1^2} = 17.02
+    \end{align*}
+    \item
+    \begin{align*}
+        f(x_i + h) + f(x_i - h) &= \text{جملات توان زوج 
+        $h$} \\
+        &= 2f(x_i) + h^2 f^{''}(x_i) + \frac{h^4}{4!} \times 2 f^{(4)}(\zeta) \xrightarrow{h = 1}  \frac{1}{12} f^{(4)}(\zeta)
+    \end{align*}
+    کران بالای بدست آمده به ازای 
+    $\zeta$
+    در بازه 
+    $[x_i, x_i + h]$
+    برقرار است.
+\end{enumerate}
+}
