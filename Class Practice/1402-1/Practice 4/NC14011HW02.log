@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  6 JAN 2024 16:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  6 JAN 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -928,22 +928,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--86
 [][]
  []
 
-(NC14011HW02-q2.tex
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 ن
-     شان دهید \(\frac{{f_{i+1} - 2f_i + f_{i-1}}}{{h^2}}\) تخمینی برای \(f''...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
+(NC14011HW02-q2.tex)
 Overfull \hbox (1.95313pt too wide) in paragraph at lines 91--91
 [][]  [][]
  []
