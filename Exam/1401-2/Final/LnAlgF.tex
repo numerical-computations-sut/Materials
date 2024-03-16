@@ -1,0 +1,162 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{nccmath}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{framed}
+\usepackage{comment}
+\usepackage{graphicx,tikzrput}
+\definecolor{shadecolor}{gray}{0.875}
+\usepackage{booktabs}
+\usepackage[a4paper,left=2cm,right=2cm,top=5.4cm,bottom=1.5cm]{geometry}
+\usepackage{multicol}
+
+
+\usepackage{xepersian}
+
+\settextfont[Scale=.95]{Yas}
+\ExplSyntaxOn
+\cs_set_eq:NN
+\etex_iffontchar:D
+\tex_iffontchar:D
+\cs_undefine:N \c_one
+\int_const:Nn \c_one { 1 }
+\ExplSyntaxOff
+
+\setdigitfont[Scale=.90]{Yas}
+
+
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+
+\makeatletter
+\ps@empty
+\def\@oddhead{
+	\rput[tl](-1.95,4.5){\includegraphics{\jobname-page.pdf}}%
+	\rput[B](8.8,2.1){آزمون پایان ‌ترم }
+	\rput[Br](3.5,1.3){\small\begin{tabular}[B]{r}%
+			تاریخ آزمون: ۱ تیر  ۱۴۰۲ \\[3mm]
+			مدت آزمون: ۱۰۰ دقیقه  \\[3mm]
+			صفحهٔ \thepage{} از \pageref{lastpage}
+	\end{tabular}}%
+}
+
+\newcount\baromcnt
+\def\barom#1{\global\advance\baromcnt#1\relax\hfill (#1 نمره)}
+\long\def\mulchoice#1#2#3#4{%
+  \par\vspace*{-.5\baselineskip}
+  \begin{multicols}{2}
+	\begin{enumerate}
+		\item[(الف)] #1\vphantom{#1#2#3#4} 
+		\item[(ج)] #3\vphantom{#1#2#3#4}
+		\item[(ب)] #2\vphantom{#1#2#3#4}
+		\item[(د)] #4\vphantom{#1#2#3#4}
+	\end{enumerate}%
+  \end{multicols}%
+  \vspace*{-.5\baselineskip}
+}
+\columnsep=0pt
+
+\def\theenumii{\@abjad \c@enumii}
+\def\abj@num@i#1{\ifcase #1\or الف\or ب\or ج\or د\or ه‍‌\or و\or ز\or ح\or ط\fi \ifnum #1=\z@ \abjad@zero \fi}
+\def\linebetw{\par\medskip\noindent\leavevmode\hbox to1.025\linewidth{\hrulefill}\par\bigskip}
+\renewcommand{\baselinestretch}{1.1}
+\advance\itemsep1mm
+
+%\DeclareMathOperator{\rank}{rank}
+%\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Tr}{tr}
+\DeclareMathOperator{\adj}{adj}
+\renewcommand{\Span}{\mathop{\text{\rm span}}\nolimits}
+
+\let\endgraph\par
+\def\baselinestretch{1.3}
+\begin{document}
+	%\fontsize{11pt}{16pt}\selectfont
+	%	\specialcomment{answer}{\begin{shaded}}{\end{shaded}}
+	\excludecomment{answer}
+	\vspace*{0mm}
+\iffalse	
+	\centerline{\ \ \ \ \ \ \ \ \fbox{\fbox{\hbox{\ \ \ \ \parbox{12cm}{%
+						%\rightmargin=1cm
+						\begin{itemize}
+							\itemsep=-1mm
+							\item همهٔ پاسخ‌هایتان را خوانا، با توضیح دقیق و کامل و مستدل بنویسید.
+							%\item پاسخ هر سؤال را در برگهٔ مستقل بنویسید.
+							%\item جمع نمره‌ها برابر \ref{lastpage} است، و نمرهٔ ۱۰۰ نمرهٔ کامل محسوب می‌شود.
+							\endgraph
+							\vspace*{-.3cm}
+						\end{itemize}
+	}}}}}
+	
+	\vspace*{5mm}
+\fi
+
+
+
+\medskip
+
+		\def\labelenumi{\textbf{\theenumi}.}
+		\def\labelenumii{({\theenumii})}
+\begin{description}
+	\vspace*{-1.8cm}
+		\item[(الف)] \textbf{بخش تستی}
+		
+		لطفاً پاسخ درست را در پاسخنامه با ذکر شماره سوال بنویسید. در صورتی‌که در پاسختان بیش از یک گزینه را انتخاب کنید به‌ازای پاسخ صحیح (در~صورت انتخاب) یک امتیاز مثبت و به‌ازای هر پاسخ غلط \(1/3 \) امتیاز منفی کسب خواهید کرد.
+		\barom{10}
+	\begin{enumerate}
+	%\vspace*{-0.4cm}
+	\item \input{LnAlgF11.tex}\vspace*{-.5cm}
+	\linebetw\vspace*{-.5cm}
+	\item \input{LnAlgF12.tex}\vspace*{-.5cm}
+	\linebetw\vspace*{-.5cm}
+	\item \input{LnAlgF13.tex}\vspace*{-.5cm}
+	\linebetw\vspace*{-.4cm}
+	\item \input{LnAlgF14.tex}
+	\vspace*{-.5cm}
+	\linebetw\vspace*{-.4cm}
+	\item \input{LnAlgF15.tex}\vspace*{-.5cm}
+	\linebetw\vspace*{-.5cm}
+	\item \input{LnAlgF16.tex}\vspace*{-.5cm}
+	\linebetw\vspace*{-.4cm}
+	\item \input{LnAlgF17.tex}\vspace*{-.5cm}
+	%\newpage
+	\item \input{LnAlgF18.tex}\vspace*{-.5cm}
+	\linebetw \vspace*{-.5cm}
+	\item \input{LnAlgF19.tex}\vspace*{-.5cm}
+	\linebetw \vspace*{-.3cm}
+	\item \input{LnAlgF110.tex}%\vspace*{-.5cm}
+	%\linebetw
+		\end{enumerate}
+	
+\item[(ب)] \textbf{بخش تشریحی}
+\barom{10}
+
+\begin{enumerate}
+\vspace*{-.2cm}
+	\item \input{LnAlgF1.tex}
+	\linebetw
+	\vspace*{-.2cm}
+	\item \input{LnAlgF2.tex}
+	\vspace*{-.3cm}
+	\linebetw
+	\vspace*{-.2cm}
+	\item \input{LnAlgF3.tex}
+	\vspace*{-.3cm}
+	\linebetw\vspace*{-.1cm}	
+\end{enumerate}
+\end{description}
+	\vskip-.5cm
+	
+	\ \hfill\textbf{موفق باشید} 
+	
+	%\medskip
+	
+	\ \hfill\textbf{\small سربازی‌آزاد و حسین‌قربان} 
+	
+
+	\makeatletter\edef\@currentlabel{\the\baromcnt}
+	\label{lastpage}
+\end{document}
