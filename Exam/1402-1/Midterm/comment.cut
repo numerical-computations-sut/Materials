@@ -1,0 +1,33 @@
+بنا به تمرین تحویلی وجود دارد ماتریس‌های وارون‌پذیر
+\(P \in M_m(\mathbb{R})\)
+و
+\(Q\in M_n(\mathbb{R})\)
+که
+\begin{align*}
+&A=P \begin{bmatrix}
+I_r & 0 \\ 0 & 0
+\end{bmatrix} Q \\
+\end{align*}
+فرض کنید
+\(B\)
+و
+\(C\)
+به ترتیب
+\(r \)
+ستون اول
+\(P\)
+و
+\(r \)
+سطر اول
+\(Q\)
+هستند. در این صورت
+\[A= \begin{bmatrix}
+B & 0
+\end{bmatrix}
+\begin{bmatrix}
+C\\ 0
+\end{bmatrix} =BC
+\]
+
+را ماتریسی
+
