@@ -13,6 +13,7 @@ int main(){
 }
 */
 
+/** step 2
 int gpu_add(int a, int b){
     return a + b; // does it work?
 }
@@ -24,6 +25,7 @@ int main(){
     c = gpu_add<<<1,1>>>(a, b);
     printf("sum of a : %d and b : %d is equal to c : %d\n", a, b, c);
 }
+*/
 
 /** step 3
 void gpu_add(int a, int b, int* c){
@@ -153,4 +155,8 @@ int main(){
     DEVICE_ASSERT(cudaMemcpy(&h_c, d_c, sizeof(int), cudaMemcpyDeviceToHost));
 
     printf("the sum of a : %d, b : %d is equal to : %d\n", h_a, h_b, h_c);
+    DEVICE_ASSERT(cudaFree(d_a));
+    DEVICE_ASSERT(cudaFree(d_b));
+    DEVICE_ASSERT(cudaFree(d_c));
+    return 0;
 }

@@ -47,5 +47,8 @@ int main(){
     cudaMemcpy(&h_c, d_c, sizeof(int), cudaMemcpyDeviceToHost);
     finish = system_clock::now();
     cout << "gpu add takes " << duration_cast<nanoseconds>(finish - start).count() << endl;
+    cudaFree(d_a);
+    cudaFree(d_b);
+    cudaFree(d_c);
     return 0;
 }
