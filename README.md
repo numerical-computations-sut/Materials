@@ -1,4 +1,4 @@
-# Materials of the [Numerical Computations](https://docs.ce.sharif.edu/course/40215) course at the [SUT](https://en.sharif.edu)
+# Materials of the [Numerical Computations](https://docs.ce.sharif.ir/course/40215) course at the [SUT](https://en.sharif.ir)
 
 This repository contains educational materials, assignments, and exams for the Numerical Computations course at the Sharif University of Technology.
 
@@ -6,6 +6,11 @@ This repository contains educational materials, assignments, and exams for the N
 
 The repository is organized as follows:
 
+- **Cheat Sheet**
+  - **1401-1**
+  - **1401-2**
+  - **1402-1**
+  - **1402-2**
 - **Class Practice**
   - **1402-1**
   - **1402-2**
@@ -34,6 +39,7 @@ The repository is organized as follows:
   - **1400-2**
   - **1401-1**
   - **1401-2**
+  - **1402-2**
 - **Source**
 
 ## Contents

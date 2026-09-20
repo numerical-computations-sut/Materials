@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xepersian}
+\settextfont[
+  Path=../1401-2/HW2 - official solution/,
+  Extension=.ttf,
+  BoldFont=*Bd,
+  ItalicFont=*It,
+  BoldItalicFont=*BdIt
+]{XB Niloofar}
+\setdigitfont[
+  Path=../1401-2/HW2 - official solution/,
+  Extension=.ttf,
+  BoldFont=*Bd,
+  ItalicFont=*It,
+  BoldItalicFont=*BdIt
+]{XB Niloofar}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\begin{document}
+\begin{center}
+  {\Large\textbf{اصلاحیهٔ پاسخ رسمی تمرین سوم ـ نیم‌سال ۱۴۰۲--۱}}
+\end{center}
+
+این برگه فقط موارد نادرست پاسخ منتشرشده را اصلاح می‌کند و باید همراه فایل اصلی خوانده شود.
+
+\section*{سؤال ۱}
+در قاعدهٔ مرکب سیمپسون، تعداد زیربازه‌ها باید زوج باشد. با اعمال کران خطای سیمپسون و گردکردن رو به بالای تعداد زیربازه‌ها به نزدیک‌ترین عدد زوج، مقادیر درست عبارت‌اند از
+\[
+  n_{\text{الف}}=52,\qquad
+  n_{\text{ب}}=40,\qquad
+  n_{\text{ج}}=42.
+\]
+در بخش الف، بیشینه‌ی دقیق
+\(\lvert4\sin x+x\cos x\rvert\)
+روی
+\([0,\pi]\)
+برابر تقریباً
+\(4.20256854\)
+است و کمترین تعداد زوج را
+\(52\)
+می‌دهد؛ مقدار ۶۰ فقط از کران محافظه‌کارانه‌ی
+\(4+\pi\)
+به‌دست می‌آید. در بخش‌های ب و ج، کران‌های محاسبه‌شده‌ی پاسخ اصلی
+\(38.2177\)
+و
+\(40.5360\)
+به ۳۹ و ۴۱ گرد شده‌اند؛ چون سیمپسون تعداد زیربازه‌ی زوج می‌خواهد، مقادیر درست ۴۰ و ۴۲ هستند.
+
+\section*{سؤال ۴}
+ضرایب درست فرمول پنج‌نقطه‌ای خواسته‌شده برابرند با
+\[
+ f'(x_0)\simeq
+ \frac{
+ -\frac14 f(x_0-h)
+ -\frac56 f(x_0)
+ +\frac32 f(x_0+h)
+ -\frac12 f(x_0+2h)
+ +\frac1{12}f(x_0+3h)}
+ {h}.
+\]
+برای \(f(x)=\sin x\cos x\)، \(x_0=1\) و \(h=0.1\) نتیجهٔ عددی
+\[
+  f'(1)\simeq-0.4161915015
+\]
+است؛ مقدار دقیق \(\cos(2)\simeq-0.4161468365\) است.
+
+\section*{سؤال ۵}
+برای تفاضل مرکزی
+\[
+  D_hf(x)=\frac{\widetilde f(x+h)-\widetilde f(x-h)}{2h},
+\qquad
+ |\widetilde f-f|\leq\alpha,
+\]
+کران خطای ناشی از گردکردن برابر \(\alpha/h\) است، نه \(\alpha/(2h)\). در نتیجه
+\[
+  |f'(x)-D_hf(x)|
+  \leq \frac{\alpha}{h}+\frac{M h^2}{6},
+  \qquad
+  M\geq |f^{(3)}(\xi)|
+  \quad\text{روی یک بازه‌ی ثابت شامل همه‌ی نقاط مجاز }x\pm h.
+\]
+کمینه‌کردن این کران می‌دهد
+\[
+  h_{\mathrm{opt}}=\left(\frac{3\alpha}{M}\right)^{1/3}.
+\]
+گام بسیار کوچک خطای گردکردن را غالب می‌کند و گام بسیار بزرگ خطای برشی را افزایش می‌دهد.
+\end{document}

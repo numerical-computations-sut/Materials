@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xepersian}
+\settextfont[
+  Path=../../Homework/1401-2/HW2 - official solution/,
+  Extension=.ttf,
+  BoldFont=*Bd,
+  ItalicFont=*It,
+  BoldItalicFont=*BdIt
+]{XB Niloofar}
+\setdigitfont[
+  Path=../../Homework/1401-2/HW2 - official solution/,
+  Extension=.ttf,
+  BoldFont=*Bd,
+  ItalicFont=*It,
+  BoldItalicFont=*BdIt
+]{XB Niloofar}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\begin{document}
+\begin{center}
+  {\Large\textbf{اصلاحیهٔ پاسخ رسمی پایان‌ترم ـ نیم‌سال ۱۴۰۲--۱}}
+\end{center}
+
+این برگه پاسخ دو سؤال تشریحی را که محیط پاسخ آن‌ها در فایل \lr{TeX} منبع خالی مانده است تکمیل می‌کند و باید همراه فایل اصلی خوانده شود.
+
+\section*{بخش تشریحی، سؤال ۳}
+با فرض آن‌که تکرار در تعداد متناهی گام در
+\(x^*\)
+متوقف نشود، خطا را با
+\(e_k=x^k-x^*\)
+نشان می‌دهیم. از تیلور و فرض
+\[
+ g^{(j)}(x^*)=0,\qquad j=1,\ldots,p-1
+\]
+برای عددی \(\xi_k\) میان \(x^k\) و \(x^*\) داریم
+\[
+  e_{k+1}
+  =g(x^k)-g(x^*)
+  =\frac{g^{(p)}(\xi_k)}{p!}e_k^p.
+\]
+چون \(x^k\to x^*\)، داریم \(\xi_k\to x^*\). پیوستگی \(g^{(p)}\) در همسایگی \(x^*\) نشان می‌دهد این مشتق روی یک بازه‌ی بسته‌ی کوچک‌تر پیرامون \(x^*\) کراندار است؛ پس برای ثابت \(\bar c\)
+\[
+  |e_{k+1}|\leq \bar c\,|e_k|^p
+\]
+و مرتبه دست‌کم \(p\) است. افزون بر آن،
+\[
+  \lim_{k\to\infty}
+  \frac{|e_{k+1}|}{|e_k|^p}
+  =\frac{|g^{(p)}(x^*)|}{p!}.
+\]
+اگر \(g^{(p)}(x^*)\neq0\)، این حد مثبت و متناهی است و مرتبه دقیقاً \(p\) خواهد بود. اگر این شرط حذف شود، فقط نتیجهٔ «دست‌کم \(p\)» تضمین می‌شود.
+
+\section*{بخش تشریحی، سؤال ۲}
+در صورت منتشرشده، ضریب جمله‌ی دوم نیز \(c_1\) نوشته شده است؛ این یک خطای تایپی است و باید \(c_2\) باشد. بنابراین از
+\[
+ I=F_1(h)+c_1h^p+\mathcal O(h^{p+1}),
+ \qquad
+ I=F_2(h)+c_2h^p+\mathcal O(h^{p+1}),
+\]
+با \(c_1\neq c_2\)، جملهٔ پیشرو خطا در ترکیب
+\[
+  \boxed{\;
+  F_{\mathrm{new}}(h)
+  =\frac{c_2F_1(h)-c_1F_2(h)}{c_2-c_1}
+  \;}
+\]
+حذف می‌شود.
+
+در بخش ب، منظور از قاعدهٔ مستطیلی باید \textbf{قاعدهٔ نقطهٔ میانی} باشد. با
+\[
+ T=\frac h2\bigl(f(a)+f(b)\bigr),
+ \qquad
+ M=h\,f\!\left(\frac{a+b}{2}\right),
+ \qquad h=b-a,
+\]
+بسط حول نقطهٔ میانی نشان می‌دهد جمله‌های پیشرو خطای \(T\) و \(M\) نسبت
+\(-2\)
+دارند؛ بنابراین
+\[
+  S=\frac{T+2M}{3}
+   =\frac h6
+     \left[
+       f(a)+4f\!\left(\frac{a+b}{2}\right)+f(b)
+     \right],
+\]
+که همان قاعدهٔ سیمپسون است. برای توجیه افزایش مرتبه و کران خطای معمول سیمپسون کافی است
+\(f\in C^4[a,b]\)
+باشد؛ در این صورت خطای قاعدهٔ تک‌بازه‌ای از مرتبهٔ
+\(\mathcal O(h^5)\)
+است.
+\end{document}

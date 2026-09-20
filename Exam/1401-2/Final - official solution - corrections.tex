@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xepersian}
+\settextfont[
+  Path=../../Homework/1401-2/HW2 - official solution/,
+  Extension=.ttf,
+  BoldFont=*Bd,
+  ItalicFont=*It,
+  BoldItalicFont=*BdIt
+]{XB Niloofar}
+\setdigitfont[
+  Path=../../Homework/1401-2/HW2 - official solution/,
+  Extension=.ttf,
+  BoldFont=*Bd,
+  ItalicFont=*It,
+  BoldItalicFont=*BdIt
+]{XB Niloofar}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\begin{document}
+\begin{center}
+  {\Large\textbf{اصلاحیهٔ پاسخ رسمی پایان‌ترم ـ نیم‌سال ۱۴۰۱--۲}}
+\end{center}
+
+این برگه فقط موارد نادرست یا افتادهٔ پاسخ منتشرشده را اصلاح می‌کند و باید همراه فایل اصلی خوانده شود.
+
+\section*{بخش تشریحی، سؤال ۳}
+اگر
+\[
+  x_i=a+ih,\qquad h=\frac{b-a}{n},
+\]
+قاعدهٔ مرکب نقطهٔ میانی برابر است با
+\[
+  M_n
+  =h\sum_{i=0}^{n-1}
+  f\!\left(\frac{x_i+x_{i+1}}2\right).
+\]
+برای \(f\in C^2[a,b]\)، عددی \(\xi\in(a,b)\) وجود دارد که
+\[
+  \int_a^b f(x)\,dx-M_n
+  =\frac{(b-a)h^2}{24}f''(\xi).
+\]
+در نتیجه کران قابل استفاده چنین است:
+\[
+  \left|\int_a^b f(x)\,dx-M_n\right|
+  \leq
+  \frac{(b-a)h^2}{24}
+  \max_{x\in[a,b]}|f''(x)|.
+\]
+
+\section*{بخش چندگزینه‌ای، سؤال ۱۰}
+برای درون‌یابی درجهٔ دو تابع
+\(f(x)=\sqrt{x}\)
+در گره‌های \(81,100,121\)، باقی‌مانده در \(x=90\) برابر است با
+\[
+ R_2(90)
+ =\frac{f^{(3)}(\xi)}{3!}
+ (90-81)(90-100)(90-121),
+ \qquad \xi\in[81,121].
+\]
+چون
+\[
+  f^{(3)}(x)=\frac{3}{8x^{5/2}},
+\]
+داریم
+\[
+ |R_2(90)|
+ \leq
+ \frac{3}{8\cdot81^{5/2}}\,
+ \frac{9\cdot10\cdot31}{6}
+ \simeq 2.95305594\times10^{-3}.
+\]
+پس گزینهٔ درست \textbf{ج}، یعنی
+\(2.95\times10^{-3}\)،
+است.
+\end{document}
