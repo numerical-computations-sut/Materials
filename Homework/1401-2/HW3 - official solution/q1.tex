@@ -37,7 +37,7 @@
     می‌دانیم در روش
     \LR{Divided Difference}:
     \begin{align} \label{eq:1}
-        \text{چندجمله‌ای درونیابی} = f(x_0) + (x - x_0) f[x_0, x_1] + \dots + (x - x_0) \dots (x - x_n) f[x_0, \dots, x_n]
+        \text{چندجمله‌ای درونیابی} = f(x_0) + (x - x_0) f[x_0, x_1] + \dots + (x - x_0) \dots (x - x_{n-1}) f[x_0, \dots, x_n]
     \end{align}
     پس عبارت فوق چندجمله‌ای از درجه
     $n$
@@ -50,7 +50,7 @@
     اما اگر سوال را با لاگرانژ حل می‌کردیم:
     \begin{align*}
     \text{درونیابی شده
-    $f$} = \sum_{i = 0}^{n} L_i (x) f(x_i) = 2 \stackrel{L_i(x) = \prod_{j = 0 \neq i}^{n} \frac{(x - x_j)}{(x_i - x_j)}}{=} \sum_{i = 0}^{n} (\prod_{j = 0 \neq i}^{n} \frac{(x- x_j)}{(x_i - x_j)}) f(x_i)
+    $f$} = \sum_{i = 0}^{n} L_i (x) f(x_i) \stackrel{L_i(x) = \prod_{j = 0 \neq i}^{n} \frac{(x - x_j)}{(x_i - x_j)}}{=} \sum_{i = 0}^{n} (\prod_{j = 0 \neq i}^{n} \frac{(x- x_j)}{(x_i - x_j)}) f(x_i)
     \end{align*}
     با توجه به این که پشت
     $x$

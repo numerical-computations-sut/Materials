@@ -26,12 +26,6 @@ matha7 <8-9> matha8 <9-10> matha9 <10-12> matha10 <12-> matha12 }{}
 %\DeclareMathSymbol{\nvartrianglelefteq}{\mathrel}{matha}{"9E}
 %\DeclareMathSymbol{\vartrianglelefteq}{\mathrel}{matha}{"9C}
 
-\newcount\HWcnt
-\def\ttmp#1#2#3#4#5#6#7#8#9|{\def\Wjob{#9}}%
-\expandafter\ttmp\jobname |
-\def\ttmp#1#2#3{\global\HWcnt=#2#3}
-\expandafter\ttmp\Wjob
-
 \settextfont[Scale = 1.0 ,
              BoldFont = *Bd ,
              ItalicFont = *It ,
@@ -99,8 +93,18 @@ matha7 <8-9> matha8 <9-10> matha9 <10-12> matha10 <12-> matha12 }{}
 	\input{q4}
 	
 	\Rule
-	\item {\textbf{سوال 6.}}
+	\item {\textbf{سوال ۶.}}
 	\input{q6}
+
+	\Rule
+
+	\item {\textbf{سوال ۷.}}
+	\input{q7}
+
+	\Rule
+
+	\item {\textbf{سوال ۸.}}
+	\input{q8}
 	
 	\Rule
 

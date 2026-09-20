@@ -32,15 +32,20 @@
         &= \frac{23 - 2 (7.94) + 9.9}{1^2} = 17.02
     \end{align*}
     \item
+    اگر
+    \(M_4=\max_{\xi\in[x_i-h,x_i+h]}|f^{(4)}(\xi)|\)
+    باشد، بسط‌های تیلور متقارن می‌دهند
     \begin{align*}
-        f(x_i + h) + f(x_i - h) &= \text{جملات توان زوج 
-        $h$} \\
-        &= 2f(x_i) + h^2 f^{''}(x_i) + \frac{h^4}{4!} \times 2 f^{(4)}(\zeta) \xrightarrow{h = 1}  \frac{1}{12} f^{(4)}(\zeta)
+        \frac{f(x_i+h)-2f(x_i)+f(x_i-h)}{h^2}
+        =f''(x_i)+\frac{h^2}{12}f^{(4)}(\zeta),
     \end{align*}
-    کران بالای بدست آمده به ازای 
-    $\zeta$
-    در بازه 
-    $[x_i, x_i + h]$
-    برقرار است.
+    که در آن
+    \(\zeta\in[x_i-h,x_i+h]\)
+    است. بنابراین
+    \[
+        \left|f''(x_i)-\frac{f(x_i+h)-2f(x_i)+f(x_i-h)}{h^2}\right|
+        \leq \frac{h^2}{12}M_4.
+    \]
+    در این سوال \(h=1\) است، پس کران بالا برابر \(M_4/12\) است.
 \end{enumerate}
 }

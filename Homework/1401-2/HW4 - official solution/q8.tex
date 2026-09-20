@@ -1,0 +1,53 @@
+\\
+معادلهٔ دیفرانسیل
+\[
+ \begin{cases}
+ y''-xy'+x^2y-x=0,\\
+ y(1)=1,\\
+ y'(1)=0.5
+ \end{cases}
+\]
+را در نظر بگیرید. با فرض
+\(h=0.1\)
+و با استفاده از روش رانگ--کوتای مرتبهٔ دوم، مقدار تقریبی
+\(y(1.1)\)
+را به دست آورید.
+
+\begingroup\color{blue}
+حل
+
+با قرار دادن
+\(z=y'\)
+دستگاه مرتبهٔ اول زیر حاصل می‌شود:
+\[
+ \begin{bmatrix}y\\z\end{bmatrix}'=
+ F(x,y,z)=
+ \begin{bmatrix}z\\xz-x^2y+x\end{bmatrix},
+ \qquad
+ \begin{bmatrix}y(1)\\z(1)\end{bmatrix}=
+ \begin{bmatrix}1\\0.5\end{bmatrix}.
+\]
+از روش هیون استفاده می‌کنیم. شیب نخست و مقدار پیش‌بینی‌شده برابرند با
+\begin{align*}
+ K_1&=F(1,1,0.5)=\begin{bmatrix}0.5\\0.5\end{bmatrix},\\
+ \begin{bmatrix}y^*\\z^*\end{bmatrix}
+ &=\begin{bmatrix}1\\0.5\end{bmatrix}+0.1K_1
+ =\begin{bmatrix}1.05\\0.55\end{bmatrix}.
+\end{align*}
+در انتهای گام داریم
+\[
+ K_2=F(1.1,1.05,0.55)
+ =\begin{bmatrix}0.55\\0.4345\end{bmatrix}.
+\]
+بنابراین
+\begin{align*}
+ \begin{bmatrix}y(1.1)\\z(1.1)\end{bmatrix}
+ &\approx \begin{bmatrix}1\\0.5\end{bmatrix}
+ +\frac{0.1}{2}(K_1+K_2)
+ =\begin{bmatrix}1.0525\\0.546725\end{bmatrix},
+\end{align*}
+و در نتیجه
+\[
+ \boxed{y(1.1)\approx1.0525}.
+\]
+\endgroup
