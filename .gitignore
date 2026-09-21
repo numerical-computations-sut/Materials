@@ -1,0 +1,35 @@
+# LaTeX build artifacts. The compiled PDFs in this repository are deliverables
+# and are tracked deliberately, so *.pdf is NOT ignored here.
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Written by the comment package for excluded environments
+*.cut
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor and OS noise
+*~
+*.bak
+*.orig
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
