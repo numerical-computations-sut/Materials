@@ -15,7 +15,11 @@
 
 \usepackage{xepersian}
 
-\settextfont[Scale=.95]{Yas}
+\settextfont[Scale=.95,
+             BoldFont=*Bd,
+             ItalicFont=*It,
+             BoldItalicFont=*BdIt,
+             Extension=.ttf]{XB Niloofar}
 \ExplSyntaxOn
 \cs_set_eq:NN
 \etex_iffontchar:D
@@ -24,7 +28,11 @@
 \int_const:Nn \c_one { 1 }
 \ExplSyntaxOff
 
-\setdigitfont[Scale=.90]{Yas}
+\setdigitfont[Scale=.90,
+              BoldFont=*Bd,
+              ItalicFont=*It,
+              BoldItalicFont=*BdIt,
+              Extension=.ttf]{XB Niloofar}
 
 
 \DeclareMathOperator{\rank}{rank}
