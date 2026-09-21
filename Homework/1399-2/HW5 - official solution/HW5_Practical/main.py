@@ -44,6 +44,8 @@ def modified_euler(b, h):
 h = float(input())
 a = float(input())
 b = float(input())
+if not isclose(a, 1.0, rel_tol=0, abs_tol=1e-12):
+    raise ValueError('The supplied initial condition is y(1)=1, so a must equal 1.')
 e = euler(b, h)
 m_e = modified_euler(b, h)
 print('Euler:')
