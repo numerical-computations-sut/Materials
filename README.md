@@ -1,67 +1,40 @@
-# Materials of the [Numerical Computations](https://docs.ce.sharif.ir/course/40215) course at the [SUT](https://en.sharif.ir)
+# Numerical Computations Course Materials
 
-This repository contains educational materials, assignments, and exams for the Numerical Computations course at the Sharif University of Technology.
+Archived materials for the [Numerical Computations](https://docs.ce.sharif.ir/course/40215) course at [Sharif University of Technology](https://en.sharif.ir).
 
-## Structure
+The repository collects past exam papers, homework sets and their official solutions, quizzes, lecture slides, cheat sheets, class practice problems, a few Jupyter notebooks and the reference texts the course draws on. Material is filed by content type first and then by Persian academic semester, so `Homework/1402-1/` holds the homework for the first semester of 1402.
 
-The repository is organized as follows:
+Most documents are in Persian. The LaTeX sources are written for XeLaTeX with the `xepersian` package and the XB Niloofar font family, which is bundled alongside the documents that need it. Compiled PDFs are tracked deliberately: for most items the PDF is the thing you actually want.
 
-- **Cheat Sheet**
-  - **1401-1**
-  - **1401-2**
-  - **1402-1**
-  - **1402-2**
-- **Class Practice**
-  - **1402-1**
-  - **1402-2**
-- **Exam**
-  - **1399-2**
-  - **1400-1**
-  - **1400-2**
-  - **1401-1**
-  - **1401-2**
-  - **1402-1**
-  - **1402-2**
-- **Homework**
-  - **1399-2**
-  - **1400-1**
-  - **1400-2**
-  - **1401-1**
-  - **1401-2**
-  - **1402-1**
-  - **1402-2**
-- **Jupyter Notebooks**
-- **Quiz**
-  - **1399-2**
-  - **1400-1**
-  - **1400-2**
-- **Slides**
-  - **1400-2**
-  - **1401-1**
-  - **1401-2**
-  - **1402-2**
-- **Source**
+## Layout
 
-## Contents
+| Directory | What is in it | Semesters available |
+| --- | --- | --- |
+| `Exam/` | Midterm and final papers, some with LaTeX sources and official solutions | 1399-2, 1400-1, 1400-2, 1401-1, 1401-2, 1402-1 |
+| `Homework/` | Problem sets, most accompanied by an official solution | 1399-2 through 1402-2 |
+| `Quiz/` | Short in-class quizzes | 1399-2, 1400-1, 1400-2 |
+| `Slides/` | Lecture slides, including the GPU and CUDA sessions | 1400-2, 1401-1, 1401-2, 1402-2 |
+| `Class Practice/` | Exercises worked through during class | 1402-1 |
+| `Cheat Sheet/` | Student-prepared reference sheets for the midterm and final | 1402-2 |
+| `Jupyter Notebooks/` | Interpolation, Taylor series and linear system solvers | not split by semester |
+| `Source/` | Reference books used by the course | not split by semester |
 
-Each course folder contains:
+## Coverage
 
-- **Class Practice**: Materials and problems used during class exercises.
-- **Exam**: Past exam papers.
-- **Homework**: Exercises and theoretical questions, including answers for selected semesters.
-- **Jupyter Notebooks**: Interactive notebooks for practical exercises.
-- **Quiz**: Quiz materials for selected semesters.
-- **Slides**: Lecture slides for course content.
-- **Source**: Additional source materials used throughout the course.
+Coverage is uneven, and a few directories exist only as placeholders for material that has not been collected yet:
 
-## Usage
+- `Cheat Sheet/` has content for 1402-2 only; the `1401-1`, `1401-2` and `1402-1` folders hold no material yet.
+- `Class Practice/1402-2` and `Exam/1402-2` hold no material yet.
+- `Slides/` has nothing for 1402-1.
+- `Quiz/` stops after 1400-2.
+- Where a homework or exam folder has no `official solution` counterpart, no solution has been published for it.
 
-This repository is intended for students enrolled in the respective courses. It provides all the necessary materials for completing course requirements and preparing for exams.
+If you have material from a semester that is missing here, a pull request adding it is welcome.
 
-## Contributions
+## Contributing
 
-While this repository is primarily managed by the course instructors, contributions or corrections from students are welcome. Please follow the standard pull request process for any contributions.
+Corrections and additions from students are welcome through the usual pull request process. When adding LaTeX sources, please commit the compiled PDF as well, and leave build artifacts such as `.aux` and `.log` files out; the `.gitignore` already covers them.
 
 ## Contact
 
-For any inquiries or issues, please contact [Dr. Hossein Ghorban](mailto:s.hosseinghorban@ipm.ir).
+For questions about the course or this repository, contact [Dr. Hossein Ghorban](mailto:s.hosseinghorban@ipm.ir).
