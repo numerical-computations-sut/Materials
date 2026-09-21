@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array}
+\usepackage{xepersian}
+\settextfont[Path=../1401-2/HW2 - official solution/,Extension=.ttf,BoldFont=*Bd,ItalicFont=*It,BoldItalicFont=*BdIt]{XB Niloofar}
+\setdigitfont[Path=../1401-2/HW2 - official solution/,Extension=.ttf,BoldFont=*Bd,ItalicFont=*It,BoldItalicFont=*BdIt]{XB Niloofar}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\begin{document}
+\begin{center}{\Large\textbf{پاسخ رسمی تمرین سوم ـ نیم‌سال ۱۴۰۱--۱}}\end{center}
+
+\section*{سؤال ۱}
+برای
+\[
+ F(x)=\begin{bmatrix}x_1+2x_2-3\\2x_1^2+x_2^2-5\end{bmatrix},
+ \quad J(x)=\begin{bmatrix}1&2\\4x_1&2x_2\end{bmatrix},
+\]
+نیوتون از \(x^{(0)}=(-1,2)^T\) می‌دهد
+\[
+\begin{array}{c|rr}
+k&x_1^{(k)}&x_2^{(k)}\\ \hline
+0&-1&2\\1&-0.8333333333&1.9166666667\\
+2&-0.8214285714&1.9107142857\\3&-0.8213672050&1.9106836025
+\end{array}
+\]
+ریشهٔ دقیق نزدیک حدس اولیه
+\[
+ \left(\frac{1-2\sqrt3}{3},\frac{4+\sqrt3}{3}\right)^T
+\]
+است؛ پس \(\boxed{x=(-0.82,1.91)^T}\).
+
+\section*{سؤال ۲}
+سه معادلهٔ نخست مسئلهٔ \(Av=\lambda v\) با
+\[
+ A=\begin{bmatrix}4&-1&1\\-1&3&-2\\1&-2&3\end{bmatrix},\qquad v^Tv=1
+\]
+هستند. اگر \((v,\lambda)\) جواب باشد، \((-v,\lambda)\) نیز جواب است. از
+\[
+ \det(\lambda I-A)=(\lambda-1)(\lambda-3)(\lambda-6)
+\]
+شش جواب نرمال‌شده به دست می‌آیند:
+\[
+ \boxed{\pm(0,1/\sqrt2,1/\sqrt2,1)},
+\]
+\[
+ \boxed{\pm(-2/\sqrt6,-1/\sqrt6,1/\sqrt6,3)},
+\]
+\[
+ \boxed{\pm(1/\sqrt3,-1/\sqrt3,1/\sqrt3,6)},
+\]
+که \(\pm\) فقط سه مؤلفهٔ بردار را تغییر می‌دهد. ژاکوبین نیوتون چهاربعدی
+\[
+ \begin{bmatrix}A-\lambda I&-v\\2v^T&0\end{bmatrix}
+\]
+است. چون صورت سؤال حدس اولیه‌ای تعیین نکرده، از شش حدس نزدیک زوج‌های ویژه استفاده می‌کنیم. نتیجهٔ اجرای نیوتون تا برقراری
+\(\|z^{(k)}-z^{(k-1)}\|_\infty<10^{-5}\) چنین است:
+\[
+\begin{array}{c|c|c}
+z^{(0)}=(v^{(0)},\lambda^{(0)})&k&
+\|z^{(k)}-z^{(k-1)}\|_\infty\\ \hline
+(0.1,0.8,0.6,0.8)&4&1.425\times10^{-8}\\
+(-0.1,-0.8,-0.6,0.8)&4&1.425\times10^{-8}\\
+(-0.8,-0.5,0.5,2.8)&4&3.654\times10^{-9}\\
+(0.8,0.5,-0.5,2.8)&4&3.654\times10^{-9}\\
+(0.7,-0.5,0.6,5.8)&4&6.398\times10^{-9}\\
+(-0.7,0.5,-0.6,5.8)&4&6.398\times10^{-9}
+\end{array}
+\]
+این شش اجرا به‌ترتیب به شش جواب بالا همگرا شده‌اند و ماندهٔ هر دستگاه کمتر از
+\(5\times10^{-16}\) است. تعریف درست نرم نیز
+\(\|z\|_\infty=\max_i|z_i|\) است.
+
+\section*{سؤال ۳}
+برای
+\[
+ T(x,y)=\left(\tfrac12\cos y,\tfrac12\sin x\right)
+\]
+تکرار به
+\[
+ (x,y)=(0.4864051547,0.2337255020)
+\]
+می‌رسد؛ پس \(\boxed{(x,y)=(0.49,0.23)}\). همچنین
+\[
+ \|T(u)-T(v)\|_\infty\leq\tfrac12\|u-v\|_\infty,
+\]
+بنابراین \(T\) انقباضی و نقطهٔ ثابت یکتا است.
+
+\section*{سؤال ۴}
+برای
+\[
+ F=\begin{bmatrix}3x_1^2-x_2^2\\3x_1x_2^2-x_1^3-1\end{bmatrix},
+ \quad
+ J=\begin{bmatrix}6x_1&-2x_2\\3x_2^2-3x_1^2&6x_1x_2\end{bmatrix},
+\]
+از \(x^{(0)}=(2,2)^T\):
+\[
+\begin{array}{c|rr|c}
+k&x_1&x_2&\|x^{(k)}-x^{(k-1)}\|_\infty\\ \hline
+1&1.1250000000&1.3750000000&8.7500\times10^{-1}\\
+2&0.7035804816&1.0337884549&4.2142\times10^{-1}\\
+3&0.5355594310&0.8921056590&1.6802\times10^{-1}\\
+4&0.5013452537&0.8667033168&3.4214\times10^{-2}\\
+5&0.5000016911&0.8660254715&1.3436\times10^{-3}\\
+6&0.5000000000&0.8660254038&1.6911\times10^{-6}\\
+7&0.5000000000&0.8660254038&2.3022\times10^{-12}
+\end{array}
+\]
+نخستین گام برآورده‌کنندهٔ آستانهٔ \(10^{-6}\)، گام هفتم است و
+\[
+ \boxed{x=(1/2,\sqrt3/2)^T}.
+\]
+
+\clearpage
+\section*{سؤال ۵}
+با \(c=(4\pi-1)/(4\pi)\):
+\[
+ F=\begin{bmatrix}\sin(4\pi x_1x_2)-2x_2-x_1\\
+ c(e^{2x_1}-e)+4ex_2^2-2ex_1\end{bmatrix},
+\]
+\[
+ J=\begin{bmatrix}
+4\pi x_2\cos(4\pi x_1x_2)-1&4\pi x_1\cos(4\pi x_1x_2)-2\\
+2ce^{2x_1}-2e&8ex_2
+\end{bmatrix}.
+\]
+از \(x^{(0)}=(0,0)^T\):
+\[
+ \boxed{x^{(1)}=(-0.439841233722,0.219920616861)^T},
+\]
+\[
+ \boxed{x^{(2)}=(-0.513161594693,-0.018376221709)^T}.
+\]
+
+\section*{سؤال ۶}
+برای \(F(x)=Ax-b\)، ژاکوبین ثابت \(A\) است. چون \(A\) ناتکین است،
+\[
+ x^{(k+1)}=x^{(k)}-A^{-1}(Ax^{(k)}-b)=A^{-1}b.
+\]
+پس در حساب دقیق نیوتون از هر حدس اولیه در یک گام به جواب یکتا می‌رسد. در ممیز شناور، دقت به شرطی‌بودن \(A\) و حل‌کنندهٔ دستگاه بستگی دارد.
+\end{document}
