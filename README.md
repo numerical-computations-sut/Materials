@@ -28,6 +28,8 @@ Coverage is uneven, and a few directories exist only as placeholders for materia
 - `Slides/` has nothing for 1402-1.
 - `Quiz/` stops after 1400-2.
 - Where a homework or exam folder has no `official solution` counterpart, no solution has been published for it.
+- The original question sheets corresponding to `Homework/1399-2/HW1 - official solution.pdf` and `Homework/1401-1/HW4 - official solution.pdf` are not present in this repository, its Git history, or the related archived repositories. The solution files are retained as historical material rather than reconstructing question wording speculatively.
+- No HW5 artifact for 1401-1 was found in the repository, its Git history, or the related archived repositories.
 
 If you have material from a semester that is missing here, a pull request adding it is welcome.
 
